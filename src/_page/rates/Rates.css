@@ -1,0 +1,24 @@
+.rates-main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 15px;
+}
+
+.rates-actions-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.rates-actions-form {
+    display: flex;
+    gap: 15px;
+}
+
+.rates-actions-period-buttons {
+    display: flex;
+    gap: 10px;
+}

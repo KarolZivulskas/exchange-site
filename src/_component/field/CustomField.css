@@ -1,0 +1,23 @@
+.textField-error-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 4px;
+    padding: 6px 16px;
+    background: #feebee;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.textField-error-icon {
+    height: 20px !important;
+    width: 16px !important;
+    color: #c62828;
+}
+
+.textField-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 8px;
+}
