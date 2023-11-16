@@ -72,7 +72,7 @@ export default function CalculatorPage() {
           onSubmit={(values: any) => handleCalculation(values as CalculationFormValues)}
           enableReinitialize
         >
-          {(formik: FormikProps<any>) => (
+          {(formik: FormikProps<unknown>) => (    // any tipas kompiliatoriaus netikrinamas tipo validavimu, tad saugiau jį pakeisti į unknown (arba konkretų tipą). Tai gali tapti saugumo problema arba bug'ų šaltiniu
             <>
               <div className={"calculator-form"}>
                 <div className={"calculator-form-currency-section"}>
