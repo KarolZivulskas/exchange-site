@@ -68,7 +68,7 @@ export default function RatesActions(props: Props) {
             .oneOf(currencyNames, "Please choose currency out of given currencies.")
             .required("Please choose currency out of given currencies.")
         })}
-        onSubmit={(values: any) => chooseCurrency(values as ActionValues)}
+        onSubmit={(values: unknown) => chooseCurrency(values as ActionValues)}   // any tipas kompiliatoriaus netikrinamas tipo validavimu, tad saugiau jį pakeisti į unknown (arba konkretų tipą). Tai gali tapti saugumo problema arba bug'ų šaltiniu
       >
         {() => (
           <div className={"rates-actions-form"}>
