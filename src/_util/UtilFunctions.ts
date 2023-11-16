@@ -7,7 +7,7 @@ export function formatTimestamp(date: moment.Moment): string {
 export function isNumeric(value?: string): boolean {
   return (
     value !== undefined &&
-    !isNaN(value as any) &&
+    !isNaN(value as unknown) &&
     !isNaN(parseFloat(value)) &&
     isFinite(parseFloat(value))
   );
