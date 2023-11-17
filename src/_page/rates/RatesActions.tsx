@@ -2,12 +2,11 @@ import {Formik} from "formik";
 import * as yup from "yup";
 import CustomAutoComplete from "_component/field/CustomAutoComplete";
 import {Button} from "@mui/material";
-import "./Rates.css";
-import Currency from "_model/Currency";
+import "./Rates.css"; 
 import TableChartIcon from '@mui/icons-material/TableChart';
 import TimelineIcon from '@mui/icons-material/Timeline';
 import SubmitToken from "_component/field/SubmitToken";
-
+// pašalinau import Currency from "_model/Currency"; ,nes nenaudojamas
 export enum Period {
   ONE_MONTH = 1,
   TWO_MONTHS,
