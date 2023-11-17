@@ -1,5 +1,5 @@
 import {Formik} from "formik";
-import * as yup from "yup";
+import {package/lib name} as yup from "yup"; // imports turėtų būti apibrėžiami specifiškai, nenaudojant wildcards
 import CustomAutoComplete from "_component/field/CustomAutoComplete";
 import {Button} from "@mui/material";
 import "./Rates.css"; 
