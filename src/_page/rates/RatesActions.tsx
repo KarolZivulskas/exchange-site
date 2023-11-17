@@ -1,13 +1,12 @@
 import {Formik} from "formik";
-import * as yup from "yup";
+import {package/lib name} as yup from "yup"; // imports turėtų būti apibrėžiami specifiškai, nenaudojant wildcards
 import CustomAutoComplete from "_component/field/CustomAutoComplete";
 import {Button} from "@mui/material";
-import "./Rates.css";
-import Currency from "_model/Currency";
+import "./Rates.css"; 
 import TableChartIcon from '@mui/icons-material/TableChart';
 import TimelineIcon from '@mui/icons-material/Timeline';
 import SubmitToken from "_component/field/SubmitToken";
-
+// pašalinau import Currency from "_model/Currency"; ,nes nenaudojamas
 export enum Period {
   ONE_MONTH = 1,
   TWO_MONTHS,
@@ -68,7 +67,7 @@ export default function RatesActions(props: Props) {
             .oneOf(currencyNames, "Please choose currency out of given currencies.")
             .required("Please choose currency out of given currencies.")
         })}
-        onSubmit={(values: any) => chooseCurrency(values as ActionValues)}
+        onSubmit={(values: unknown) => chooseCurrency(values as ActionValues)}   // any tipas kompiliatoriaus netikrinamas tipo validavimu, tad saugiau jį pakeisti į unknown (arba konkretų tipą). Tai gali tapti saugumo problema arba bug'ų šaltiniu
       >
         {() => (
           <div className={"rates-actions-form"}>
